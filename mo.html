@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MTech works — معرض أعمال</title>
+  <style>
+    :root{
+      --accent:#0b72ff;
+      --dark:#0b1220;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f5f7fb;
+      --radius:12px;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: "Segoe UI", Tahoma, Arial, "Noto Sans Arabic", sans-serif; background:var(--bg); color:var(--dark); -webkit-font-smoothing:antialiased;
+    }
+    header{
+      background: linear-gradient(90deg,var(--card), #eef6ff);
+      padding:18px 24px; position:sticky; top:0; z-index:40; box-shadow:0 6px 18px rgba(11,18,32,0.06);
+      backdrop-filter: blur(6px);
+    }
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;background:var(--accent);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav ul{display:flex;gap:14px;list-style:none;padding:0;margin:0}
+    nav a{color:var(--dark);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a:hover{background:rgba(11,114,255,0.08)}
+    .cta{background:var(--accent);color:white;padding:8px 14px;border-radius:10px;text-decoration:none}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:46px 0}
+    .hero h1{margin:0;font-size:32px}
+    .hero p{color:var(--muted);margin-top:12px;line-height:1.6}
+    .hero .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 10px 30px rgba(11,18,32,0.06)}
+
+    /* Gallery */
+    .section{margin:34px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .project{background:linear-gradient(180deg,#fff,#fbfdff);padding:12px;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(11,18,32,0.04)}
+    .project img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+    .project h3{margin:10px 0 6px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+
+    /* Services */
+    .services{display:flex;gap:12px}
+    .service{flex:1;padding:18px;background:var(--card);border-radius:12px;text-align:center}
+    .service h4{margin:10px 0 6px}
+
+    /* Contact */
+    .contact{display:flex;gap:18px}
+    form{flex:1;background:var(--card);padding:18px;border-radius:12px}
+    .contact-info{width:320px;padding:18px;background:linear-gradient(180deg,#fff,#f3f8ff);border-radius:12px}
+    label{display:block;margin-top:10px;font-size:14px;color:var(--muted)}
+    input,textarea{width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #e6e9ef;font-size:14px}
+    button{margin-top:12px;padding:10px 14px;border-radius:10px;border:0;background:var(--accent);color:white;font-weight:700}
+
+    footer{padding:26px 0;color:var(--muted)}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid{grid-template-columns:repeat(2,1fr)}
+      .contact{flex-direction:column}
+      .contact-info{width:100%}
+    }
+    @media (max-width:640px){
+      nav ul{display:none}
+      .hero h1{font-size:24px}
+      .grid{grid-template-columns:1fr}
+    }
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .tag{display:inline-block;padding:6px 8px;border-radius:999px;border:1px solid rgba(11,114,255,0.12);font-size:13px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">M</div>
+        <div>
+          <div style="font-weight:800">MTech works</div>
+          <div style="font-size:12px;color:var(--muted)">تصميم واجهات و مشاريع برمجية</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#projects">أعمالي</a></li>
+          <li><a href="#services">خدمات</a></li>
+          <li><a href="#contact">تواصل</a></li>
+        </ul>
+      </nav>
+
+      <a class="cta" href="#contact">اطلب خدمة</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="home" class="hero">
+      <div>
+        <h1>صمّم، طوّر، وأطلق — حلول تقنية بلمسة احترافية</h1>
+        <p>مرحبا! أنا MTech works — أقدّم خدمات تصميم مواقع، تطوير واجهات، وتصميم شعارات. هذه واجهة جاهزة يمكنك تعديل النصوص والصور بسهولة.</p>
+
+        <div style="display:flex;gap:10px;margin-top:18px;align-items:center">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">تصميم واجهات</span>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:10px">
+          <a class="cta" href="#projects">شاهد معرض الأعمال</a>
+          <a style="padding:8px 12px;border-radius:10px;background:transparent;border:1px solid rgba(11,18,32,0.06);text-decoration:none;color:var(--dark)" href="#services">الخدمات</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3 style="margin-top:0">تفاصيل سريعة</h3>
+        <p class="muted">- تصميم موقع عرض أعمال شخصي
+- معرض صور، صفحة خدمات، ونموذج تواصل
+- متوافق مع الجوال وسهل التعديل</p>
+        <hr style="margin:12px 0;border:none;border-top:1px solid #eef3ff">
+        <strong>الأسعار:</strong>
+        <p class="muted" style="margin:6px 0">نموذج عرض فقط — أضف أسعارك هنا بالريال العماني إذا رغبت.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>معرض أعمالي</h2>
+      <p class="muted">أمثلة سريعة من المشاريع - اضغط لأي صورة لفتحها بحجم أكبر (تستطيع استبدال الروابط بالصور الحقيقية)</p>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="project">
+          <img src="c:\Users\admin\Downloads\AZp9ZEyEpoKXRhtLrGFROg-AZp9ZEyE86-c0pEi9t9BJg.jpg" alt="مشروع 1">
+          <h3>واجهة متجر إلكتروني</h3>
+          <p>تصميم صفحة منتجات مع لوحة تحكم مبسطة.</p>
+        </div>
+        <div class="project">
+          <img src="c:\Users\admin\Downloads\AZp9ZWECr5H1Z3uu7yG1NA-AZp9ZWECJc8lyJthHam4Zg.jpg" alt="مشروع 2">
+          <h3>موقع معرض أعمال</h3>
+          <p>معرض صور تفاعلي وشرح لكل مشروع.</p>
+        </div>
+        <div class="project">س
+          <img src="https://via.placeholder.com/800x600?text=Project+3" alt="مشروع 3">
+          <h3>شعارات</h3>
+          <p>تصميم هادف لجذب تحميلات التطبيق.</p>
+        </div>
+        <div class="project">
+          <img src="c:\Users\admin\Downloads\بصريي.jpg" alt="مشروع 4">
+          <h3>هوية مرئية لشركة</h3>
+          <p>شعار، لونيات وورق مراسلات.</p>
+        </div>
+        <div class="project">
+          <img src="c:\Users\admin\Downloads\يريد.jpg" alt="مشروع 5">
+          <h3>نظام حجز مبسط</h3>
+          <p>نموذج حجز وتأكيد عبر البريد الإلكتروني.</p>
+        </div>
+        <div class="project">
+          <img src="c:\Users\admin\Downloads\ه.jpg" alt="مشروع 6">
+          <h3>مدونة تقنية</h3>
+          <p>تصميم صفحة مقالات مع فلترة وتصنيفات.</p>
+        </div>
+      </div>
+    </section>  
+
+    <section id="services" class="section">
+      <h2>الخدمات</h2>
+      <div class="services" style="margin-top:12px">
+        <div class="service">
+          <h4>تصميم واجهات</h4>
+          <p class="muted">تصميم UI/UX لصفحات الويب وتطبيقات الهاتف.</p>
+        </div>
+        <div class="service">
+          <h4>تطوير front-end</h4>
+          <p class="muted">HTML/CSS/JavaScript — مواقع سريعة ومتوافقة.</p>
+        </div>
+        <div class="service">
+          <h4>هوية بصرية</h4>
+          <p class="muted">شعارات، ألوان، وقوالب للعروض.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>تواصل معي</h2>
+      <div class="contact" style="margin-top:12px">
+        <form onsubmit="event.preventDefault(); alert('تم إرسال النموذج (تجريبي).');">
+          <label>الاسم</label>
+          <input type="text" placeholder="اسمك">
+          <label>البريد الإلكتروني</label>
+          <input type="email" placeholder="example@mail.com">
+          <label>رسالة</label>
+          <textarea rows="5" placeholder="أخبرني بما تحتاج"></textarea>
+          <button type="submit">أرسل</button>
+        </form>
+
+        <div class="contact-info">
+          <h4>معلومات الاتصال</h4>
+          <p class="muted" style="margin-top:6px">البريد; m9148178@gmail.com</p>
+          <p class="muted">الهاتف: +968 76643511x</p>
+          <a href="https://www.instagram.com/y70z_?utm_source=qr&igsh=NDQ4NGFneHltYWJp">Go to instagram</a>
+          </a>
+          <hr style="margin:12px 0;border:none;border-top:1px solid #eef3ff">
+          <p style="font-size:14px">أوقات العمل: <span class="muted">السبت - الخميس، 9 ص - 6 م</span></p>
+          <p style="margin-top:8px;color:var(--muted);font-size:13px">ملاحظة: هذا قالب HTML ثابت — لإضافة وظائف حقيقية (حفظ رسائل، نموذج يعمل، معرض ديناميكي) أحتاج أضيف JavaScript أو ربط بخادم.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+      <div>© <strong>MTech works</strong> — جميع الحقوق محفوظة</div>
+      <div style="color:var(--muted)">صناعة عمان 🇴🇲</div>
+    </div>
+  </footer>
+
+  <script>
+    // صغير: يمكنك استبدال الصور، النصوص، أو إضافة وظائف JS هنا
+  </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MTech works</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        background:#011627; /* الأزرق الغامق */
+        height:200vh; /* يخلي الصفحة تطول وتتحرك */
+        overflow-x:hidden;
+        font-family:Arial, sans-serif;
+    }
+
+    /* خلفية الخطوط المتحركة */
+    .lines{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        overflow:hidden;
+        z-index:1;
+        pointer-events:none;
+    }
+
+    .line{
+        position:absolute;
+        width:2px;
+        height:100%;
+        background:rgba(255,255,255,0.15);
+        animation: glow 3s linear infinite;
+    }
+
+    @keyframes glow {
+        0%{ opacity:0.1; }
+        50%{ opacity:1; }
+        100%{ opacity:0.1; }
+    }
+
+    /* تأثير دائرة إلكترونية */
+    .circuit{
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:
+            radial-gradient(circle at 20% 30%, rgba(255,255,255,0.05), transparent 70%),
+            radial-gradient(circle at 80% 60%, rgba(255,255,255,0.04), transparent 70%),
+            radial-gradient(circle at 50% 80%, rgba(255,255,255,0.03), transparent 70%);
+        z-index:1;
+        pointer-events:none;
+    }
+
+    /* اسم الموقع */
+    h1{
+        position:relative;
+        z-index:5;
+        color:white;
+        font-size:3rem;
+        text-align:center;
+        margin-top:120px;
+        letter-spacing:3px;
+        text-shadow:0 0 15px #fff;
+    }
+</style>
+</head>
+<body>
+
+<h1>MTech works</h1>
+
+<div class="lines" id="lines"></div>
+<div class="circuit"></div>
+
+<script>
+    // إنشاء الخطوط البيضاء المتحركة
+    const container = document.getElementById('lines');
+
+    for(let i=0; i<20; i++){
+        let line = document.createElement('div');
+        line.classList.add('line');
+        line.style.left = Math.random()*100 + "%";
+        line.style.animationDuration = (2 + Math.random()*3) + "s";
+        container.appendChild(line);
+    }
+</script>
+
+</body>
+</html>
